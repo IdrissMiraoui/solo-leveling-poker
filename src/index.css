@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-solo-bg: #0a0a0a;
+  --color-solo-blue: #2dd4bf;
+  --color-solo-blue-dim: #0f5149;
+  --color-solo-red: #ef4444;
+
+  --font-mono: "Courier New", Courier, monospace;
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  body {
+    @apply bg-solo-bg text-white font-mono overflow-hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-solo-blue/30 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-solo-blue/50;
+}
